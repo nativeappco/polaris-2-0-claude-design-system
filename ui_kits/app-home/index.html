@@ -1,0 +1,82 @@
+<!-- @dsCard group="App Home" viewport="1280x800" name="Embedded app (Bundle Factory)" subtitle="Home, bundles list, editor, settings and setup inside a mocked admin frame" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bundle Factory · App Home UI kit</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://cdn.shopify.com/shopifycloud/polaris-2.0-rc.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="data.js"></script>
+<style>
+/* Host chrome only (mock of the Shopify admin around the app iframe). App content uses s-* attributes exclusively. */
+html,body{margin:0;height:100%}
+ui-nav-menu,ui-title-bar,ui-save-bar{display:none}
+body{background:var(--p-color-bg-inverse);font-family:var(--p-font-family-sans);font-feature-settings:var(--p-font-feature-settings)}
+.af{display:grid;grid-template-columns:240px minmax(0,1fr);height:100vh}
+.af-nav{background:var(--p-color-bg-inverse);color:var(--p-color-nav-text);display:flex;flex-direction:column;padding:12px 10px;gap:8px;overflow:auto;font-size:var(--p-font-size-325);line-height:var(--p-font-line-height-500)}
+.af-top{height:32px;display:flex;align-items:center;padding:0 6px}
+.af-word{font-weight:600;font-size:15px;letter-spacing:-.01em;color:#fff}
+.af-search{display:flex;align-items:center;gap:8px;height:36px;padding:0 12px;border-radius:var(--p-border-radius-300);background:#1b1b1b;color:var(--p-color-nav-text-secondary)}
+.af-search span{flex:1}.af-search kbd{font:inherit;font-size:12px}
+.af-search s-icon,.af-ico s-icon{filter:var(--p-filter-nav-icon)}
+.af-list{display:flex;flex-direction:column;gap:1px;margin-top:6px}
+.af-item{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:8px;height:32px;padding:0 8px;border-radius:var(--p-border-radius-200);cursor:pointer;color:var(--p-color-nav-text)}
+.af-item:hover{background:#ffffff0d}
+.af-item.is-active{background:#ffffff14;color:#fff;box-shadow:var(--p-shadow-nav-selected)}
+.af-item.is-sub{padding-left:36px;color:var(--p-color-nav-text-secondary)}.af-item.is-sub.is-active{color:#fff}
+.af-ico{display:inline-flex;width:20px;justify-content:center}
+.af-label{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.af-badge{font-size:12px;font-weight:500;padding:0 6px;border-radius:var(--p-border-radius-200);background:#ffffff14}
+.af-group{display:flex;align-items:center;gap:2px;padding:14px 8px 4px;color:var(--p-color-nav-text-secondary);font-size:13px}
+.af-group s-icon{filter:var(--p-filter-nav-icon)}
+.af-foot{margin-top:auto}
+.af-main{padding:6px 6px 0 0;min-width:0}
+.af-canvas{background:var(--p-color-bg);border-radius:var(--p-border-radius-400) var(--p-border-radius-400) 0 0;height:100%;overflow:auto}
+.af-mobilebar{display:none}
+.af-scrim{display:none}
+.af-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--p-color-bg-inverse);color:#fff;padding:10px 16px;border-radius:var(--p-border-radius-300);font-size:13px;box-shadow:var(--p-shadow-toast);z-index:1000;padding-bottom:calc(10px + var(--shopify-safe-area-inset-bottom,0px))}
+@media (max-width:767px){
+.af{grid-template-columns:minmax(0,1fr);grid-template-rows:52px minmax(0,1fr)}
+.af-mobilebar{display:flex;align-items:center;justify-content:space-between;padding:0 12px;color:#fff}
+.af-burger{all:unset;cursor:pointer;display:inline-flex}.af-burger s-icon,.af-mobilebar s-icon{filter:var(--p-filter-nav-icon)}
+.af-nav{position:fixed;inset:0 auto 0 0;width:260px;z-index:50;transform:translateX(-100%);transition:transform var(--p-motion-duration-200) var(--p-motion-ease-out)}
+.af-nav.is-open{transform:none}
+.af-scrim{display:block;position:fixed;inset:0;background:var(--p-color-backdrop-bg);z-index:40}
+.af-main{padding:0}
+.af-canvas{border-radius:var(--p-border-radius-400) var(--p-border-radius-400) 0 0}
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>if(!window.Polaris20AppHomeDesignSystem_b76c1a){document.getElementById('root').innerHTML='<p style="color:#fff;padding:24px;font:13px sans-serif">Design system bundle not compiled yet. Reload after the next build.</p>';window.__noBundle=true}</script>
+<script type="text/babel" src="AdminFrame.jsx"></script>
+<script type="text/babel" src="HomeScreen.jsx"></script>
+<script type="text/babel" src="BundlesScreen.jsx"></script>
+<script type="text/babel" src="BundleEditScreen.jsx"></script>
+<script type="text/babel" src="SettingsScreen.jsx"></script>
+<script type="text/babel" src="SetupScreen.jsx"></script>
+<script type="text/babel">
+function App() {
+  const [route, setRoute] = React.useState(() => localStorage.getItem('kit-route') || 'home');
+  const [toast, setToast] = React.useState(null);
+  const nav = (r) => { setRoute(r); localStorage.setItem('kit-route', r); document.querySelector('.af-canvas')?.scrollTo(0, 0); };
+  const showToast = (m) => { if (window.shopify?.toast) return window.shopify.toast.show(m); setToast(m); clearTimeout(window.__t); window.__t = setTimeout(() => setToast(null), 2400); };
+  const screens = { home: HomeScreen, bundles: BundlesScreen, edit: BundleEditScreen, settings: SettingsScreen, setup: SetupScreen };
+  const Screen = screens[route] || HomeScreen;
+  return (
+    <AdminFrame route={route} onNavigate={nav}>
+      <Screen key={route} onNavigate={nav} onToast={showToast} />
+      {toast ? <div className="af-toast" role="status">{toast}</div> : null}
+    </AdminFrame>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

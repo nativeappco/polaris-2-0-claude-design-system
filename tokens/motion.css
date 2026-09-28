@@ -1,0 +1,27 @@
+/* Polaris 2.0 motion tokens. */
+:root{
+  --p-motion-duration-0: 0ms; /* @kind other */
+  --p-motion-duration-50: 50ms; /* @kind other */
+  --p-motion-duration-100: 100ms; /* @kind other */
+  --p-motion-duration-150: 150ms; /* @kind other */
+  --p-motion-duration-200: 200ms; /* @kind other */
+  --p-motion-duration-250: 250ms; /* @kind other */
+  --p-motion-duration-300: 300ms; /* @kind other */
+  --p-motion-duration-350: 350ms; /* @kind other */
+  --p-motion-duration-400: 400ms; /* @kind other */
+  --p-motion-duration-450: 450ms; /* @kind other */
+  --p-motion-duration-500: 500ms; /* @kind other */
+  --p-motion-duration-5000: 5000ms; /* @kind other */
+  --p-motion-ease: cubic-bezier(.25, .1, .25, 1); /* @kind other */
+  --p-motion-ease-in: cubic-bezier(.42, 0, 1, 1); /* @kind other */
+  --p-motion-ease-out: cubic-bezier(.19, .91, .38, 1); /* @kind other */
+  --p-motion-ease-out-emphasized: cubic-bezier(.2, .8, 0, 1); /* @kind other */
+  --p-motion-ease-in-out: cubic-bezier(.42, 0, .58, 1); /* @kind other */
+  --p-motion-linear: cubic-bezier(0, 0, 1, 1); /* @kind other */
+  --p-motion-keyframes-bounce: p-motion-keyframes-bounce; /* @kind other */
+  --p-motion-keyframes-fade-in: p-motion-keyframes-fade-in; /* @kind other */
+  --p-motion-keyframes-pulse: p-motion-keyframes-pulse; /* @kind other */
+  --p-motion-keyframes-spin: p-motion-keyframes-spin; /* @kind other */
+  --p-motion-keyframes-appear-above: p-motion-keyframes-appear-above; /* @kind other */
+  --p-motion-keyframes-appear-below: p-motion-keyframes-appear-below; /* @kind other */
+}

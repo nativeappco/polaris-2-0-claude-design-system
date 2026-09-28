@@ -1,0 +1,8 @@
+/* Polaris 2.0 breakpoints. */
+:root{
+  --p-breakpoints-xs: 0rem; /* @kind other */
+  --p-breakpoints-sm: 30.625rem; /* @kind other */
+  --p-breakpoints-md: 48rem; /* @kind other */
+  --p-breakpoints-lg: 65rem; /* @kind other */
+  --p-breakpoints-xl: 90rem; /* @kind other */
+}

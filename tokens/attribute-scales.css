@@ -1,0 +1,51 @@
+/* Polaris 2.0 attribute scales — the exact values the s-* runtime resolves for component attribute keywords (read from polaris-2.0-rc.js). Use the KEYWORD on the component (gap="base"); these vars exist only for documentation, specimens and mock host chrome. */
+:root{
+  /* gap / padding keywords */
+  --s-space-none: 0rem;
+  --s-space-small-500: .125rem;
+  --s-space-small-400: .25rem;
+  --s-space-small-300: .375rem;
+  --s-space-small-200: .5rem;
+  --s-space-small-100: .75rem;
+  --s-space-small: .75rem;
+  --s-space-base: 1rem;
+  --s-space-large: 1.25rem;
+  --s-space-large-100: 1.25rem;
+  --s-space-large-200: 1.5rem;
+  --s-space-large-300: 2rem;
+  --s-space-large-400: 2.5rem;
+  --s-space-large-500: 3rem;
+  /* borderradius keywords */
+  --s-radius-none: 0rem;
+  --s-radius-small-200: .25rem;
+  --s-radius-small-100: .375rem;
+  --s-radius-small: .375rem;
+  --s-radius-base: .5rem;
+  --s-radius-large: .75rem;
+  --s-radius-large-100: .75rem;
+  --s-radius-large-200: 1rem;
+  /* background keywords */
+  --s-background-transparent: var(--p-color-bg-surface-transparent);
+  --s-background-base: var(--p-color-bg-surface);
+  --s-background-subdued: var(--p-color-bg-surface-secondary);
+  --s-background-strong: var(--p-color-bg-surface-tertiary);
+  /* admin nav icon filters (from runtime; dark nav scheme) */
+  --p-filter-nav-icon: saturate(0) invert(1) brightness(1.5) contrast(1.5) opacity(.9); /* @kind other */
+  --p-filter-nav-icon-active: saturate(0) invert(1) brightness(2) contrast(1.5) opacity(.9); /* @kind other */
+  /* semantic aliases */
+  --surface-page: var(--p-color-bg);
+  --surface-card: var(--p-color-bg-surface);
+  --surface-subdued: var(--p-color-bg-surface-secondary);
+  --surface-nav: var(--p-color-bg-inverse);
+  --text-body: var(--p-color-text);
+  --text-subdued: var(--p-color-text-secondary);
+  --text-link: var(--p-color-text-link);
+  --text-on-nav: var(--p-color-nav-text);
+  --border-default: var(--p-color-border);
+  --radius-section: var(--p-border-radius-container);
+  --radius-control: var(--p-border-radius-control);
+  --radius-action: var(--p-border-radius-action);
+  --shadow-section: var(--p-shadow-section);
+  --font-sans: var(--p-font-family-sans);
+  --font-mono: var(--p-font-family-mono);
+}

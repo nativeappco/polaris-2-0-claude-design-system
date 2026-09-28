@@ -1,0 +1,21 @@
+<!-- @dsCard group="Components" viewport="700x260" name="Overlays" subtitle="s-modal, s-popover, s-tooltip — opened with command/commandFor" -->
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Overlays</title><link rel="stylesheet" href="../../styles.css"><style>body{margin:0;padding:16px;background:var(--p-color-bg);font-family:var(--p-font-family-sans)}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://cdn.shopify.com/shopifycloud/polaris-2.0-rc.js"></script>
+<script src="../../_ds_bundle.js"></script></head><body><div id="root"></div>
+<script type="text/babel">
+const { Modal, Popover, Tooltip, Button, Menu, Paragraph, Stack, Icon } = window.Polaris20AppHomeDesignSystem_b76c1a;
+function Demo(){ return (<>
+<Stack direction="inline" gap="small-200" alignItems="center">
+<Button commandFor="demo-modal" command="--show">Open modal</Button>
+<Modal id="demo-modal" heading="Delete bundle?"><Paragraph>This permanently deletes the bundle and its product. This can't be undone.</Paragraph><Button slot="primary-action" variant="primary" tone="critical" commandFor="demo-modal" command="--hide">Delete</Button><Button slot="secondary-actions" commandFor="demo-modal" command="--hide">Cancel</Button></Modal>
+<Button commandFor="demo-pop" command="--toggle" icon="chevron-down">More actions</Button>
+<Popover id="demo-pop"><Menu><Button>Duplicate</Button><Button>Archive</Button></Menu></Popover>
+<Button interestFor="demo-tip" icon="info" variant="tertiary" accessibilityLabel="About bundles"></Button>
+<Tooltip id="demo-tip">Bundles are sold as one product</Tooltip>
+</Stack>
+</>); }
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

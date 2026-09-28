@@ -1,0 +1,16 @@
+/* Polaris 2.0 z-index tokens. */
+:root{
+  --p-z-index-0: auto; /* @kind other */
+  --p-z-index-1: 100; /* @kind other */
+  --p-z-index-2: 400; /* @kind other */
+  --p-z-index-3: 510; /* @kind other */
+  --p-z-index-4: 512; /* @kind other */
+  --p-z-index-5: 513; /* @kind other */
+  --p-z-index-6: 514; /* @kind other */
+  --p-z-index-7: 515; /* @kind other */
+  --p-z-index-8: 516; /* @kind other */
+  --p-z-index-9: 517; /* @kind other */
+  --p-z-index-10: 518; /* @kind other */
+  --p-z-index-11: 519; /* @kind other */
+  --p-z-index-12: 520; /* @kind other */
+}

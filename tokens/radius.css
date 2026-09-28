@@ -1,0 +1,40 @@
+/* Polaris 2.0 radius + border-width tokens (new admin style). */
+:root{
+  --p-border-radius-0: 0rem;
+  --p-border-radius-050: .125rem;
+  --p-border-radius-100: .25rem;
+  --p-border-radius-150: .375rem;
+  --p-border-radius-200: .5rem;
+  --p-border-radius-300: .75rem;
+  --p-border-radius-400: 1rem;
+  --p-border-radius-500: 1.25rem;
+  --p-border-radius-750: 1.875rem;
+  --p-border-radius-full: 624.9375rem;
+  --p-border-radius-tag: .5rem;
+  --p-border-radius-tag-inner: .375rem;
+  --p-border-radius-tag-seam: .125rem;
+  --p-border-radius-element: .625rem;
+  --p-border-radius-control: .75rem;
+  --p-border-radius-control-inner: .5rem;
+  --p-border-radius-checkbox: .25rem;
+  --p-border-radius-checkbox-checked: calc(.25rem + .0625rem);
+  --p-border-radius-popover: 1rem;
+  --p-border-radius-option-item: .75rem;
+  --p-border-radius-dialog: 1.5rem;
+  --p-border-radius-container: 1.25rem;
+  --p-border-radius-avatar: clamp(.375rem, round(30%, .125rem), .75rem);
+  --p-border-radius-preview: 624.9375rem;
+  --p-border-radius-action: 624.9375rem;
+  --p-border-radius-banner-inner: 1rem;
+  --p-border-radius-content-highlight: .125rem;
+  --p-border-radius-focus: .25rem;
+  --p-border-radius-media-compact: .25rem;
+  --p-border-radius-media: clamp(.375rem, round(25%, .125rem), .75rem);
+  --p-border-radius-corner-shape: superellipse(1.333); /* @kind other */
+  --p-border-width-0: 0rem;
+  --p-border-width-0165: .04125rem;
+  --p-border-width-025: .0625rem;
+  --p-border-width-050: .125rem;
+  --p-border-width-100: .25rem;
+  --p-border-width-outline-input-focus: none; /* @kind other */
+}

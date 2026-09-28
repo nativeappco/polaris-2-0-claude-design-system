@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Polaris 2.0 page patterns</title>
+  <script src="https://cdn.shopify.com/shopifycloud/polaris-2.0-rc.js"></script>
+</head>
+<body>
+<!-- App Bridge navigation for an embedded app (rendered by the admin, not by Polaris) -->
+<ui-nav-menu>
+  <a href="/app" rel="home">Home</a>
+  <a href="/app/settings">Settings</a>
+</ui-nav-menu>
+
+<!-- Pattern 1: index page with a table, filters and an empty state alternative -->
+<s-page heading="Records">
+  <s-button slot="primary-action" variant="primary">Create record</s-button>
+  <s-button slot="secondary-actions">Import</s-button>
+
+  <s-banner tone="warning" heading="7 days left in your trial" dismissible>
+    Upgrade to keep the storefront widget active. <s-link href="/app/plans">View plans</s-link>
+  </s-banner>
+
+  <s-section>
+    <s-table paginate hasnextpage>
+      <s-search-field slot="filters" label="Search" labelaccessibilityvisibility="exclusive" placeholder="Search records"></s-search-field>
+      <s-table-header-row>
+        <s-table-header>Name</s-table-header>
+        <s-table-header>Status</s-table-header>
+        <s-table-header>Updated</s-table-header>
+      </s-table-header-row>
+      <s-table-body>
+        <s-table-row clickdelegate>
+          <s-table-cell>
+            <s-stack direction="inline" gap="small" alignitems="center">
+              <s-thumbnail size="small" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png" alt=""></s-thumbnail>
+              <s-link href="#">Gift set</s-link>
+            </s-stack>
+          </s-table-cell>
+          <s-table-cell><s-badge tone="success">Active</s-badge></s-table-cell>
+          <s-table-cell>2026-09-26</s-table-cell>
+        </s-table-row>
+      </s-table-body>
+    </s-table>
+  </s-section>
+
+  <s-section>
+    <s-empty-state heading="No records yet">
+      <s-paragraph slot="subheading">Create your first record to get started.</s-paragraph>
+      <s-button slot="primary-action" variant="primary">Create record</s-button>
+    </s-empty-state>
+  </s-section>
+</s-page>
+
+<!-- Pattern 2: detail/edit page with main + aside, form sections and a save bar -->
+<s-page heading="Edit record">
+  <s-button slot="breadcrumb-actions" href="/app" icon="arrow-left" accessibilitylabel="Back to records"></s-button>
+  <s-button slot="secondary-actions" tone="critical" commandfor="delete-modal" command="--show">Delete</s-button>
+
+  <s-section heading="Details">
+    <s-stack direction="block" gap="base">
+      <s-text-field label="Name" required maxlength="30" details="Shown to merchants only"></s-text-field>
+      <s-text-area label="Description" rows="3"></s-text-area>
+    </s-stack>
+  </s-section>
+
+  <s-section heading="Settings" subheading="Values fall back to defaults until overridden">
+    <s-grid gridtemplatecolumns="1fr 1fr" gap="base">
+      <s-number-field label="Minimum items" min="1" max="10" value="2"></s-number-field>
+      <s-number-field label="Maximum items" min="1" max="10" value="5"></s-number-field>
+    </s-grid>
+    <s-checkbox label="Enabled"></s-checkbox>
+  </s-section>
+
+  <s-section slot="aside" heading="Status">
+    <s-stack direction="block" gap="small">
+      <s-badge tone="info">Draft</s-badge>
+      <s-paragraph tone="subdued">Last updated 2026-09-26</s-paragraph>
+      <s-button variant="secondary">View on storefront</s-button>
+    </s-stack>
+  </s-section>
+
+  <s-modal id="delete-modal" heading="Delete record?">
+    <s-paragraph>This permanently deletes the record and its product. This cannot be undone.</s-paragraph>
+    <s-button slot="primary-action" variant="primary" tone="critical" commandfor="delete-modal" command="--hide">Delete</s-button>
+    <s-button slot="secondary-actions" commandfor="delete-modal" command="--hide">Cancel</s-button>
+  </s-modal>
+</s-page>
+
+<!-- App Bridge save bar for unsaved changes (rendered by the admin frame) -->
+<ui-save-bar id="save-bar">
+  <button variant="primary">Save</button>
+  <button>Discard</button>
+</ui-save-bar>
+
+<!-- Pattern 3: stepper/onboarding built from sections -->
+<s-page heading="Set up">
+  <s-section heading="1. Select theme" subheading="Choose where the widget is installed">
+    <s-badge slot="accessory" tone="success">Done</s-badge>
+    <s-select label="Theme">
+      <s-option value="1" selected>Dawn (published)</s-option>
+      <s-option value="2">Sense</s-option>
+    </s-select>
+  </s-section>
+  <s-section heading="2. Enable app embed">
+    <s-badge slot="accessory">Not done</s-badge>
+    <s-stack direction="inline" gap="base">
+      <s-button variant="primary" href="#" target="_blank">Open theme editor</s-button>
+      <s-button>Verify</s-button>
+      <s-button variant="tertiary">Mark as done</s-button>
+    </s-stack>
+  </s-section>
+</s-page>
+</body>
+</html>

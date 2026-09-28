@@ -1,0 +1,44 @@
+/* Polaris 2.0 sizing tokens. */
+:root{
+  --p-height-0: 0rem; /* @kind other */
+  --p-height-025: .0625rem; /* @kind other */
+  --p-height-050: .125rem; /* @kind other */
+  --p-height-100: .25rem; /* @kind other */
+  --p-height-150: .375rem; /* @kind other */
+  --p-height-200: .5rem; /* @kind other */
+  --p-height-300: .75rem; /* @kind other */
+  --p-height-400: 1rem; /* @kind other */
+  --p-height-500: 1.25rem; /* @kind other */
+  --p-height-600: 1.5rem; /* @kind other */
+  --p-height-700: 1.75rem; /* @kind other */
+  --p-height-800: 2rem; /* @kind other */
+  --p-height-900: 2.25rem; /* @kind other */
+  --p-height-1000: 2.5rem; /* @kind other */
+  --p-height-1200: 3rem; /* @kind other */
+  --p-height-1600: 4rem; /* @kind other */
+  --p-height-2000: 5rem; /* @kind other */
+  --p-height-2400: 6rem; /* @kind other */
+  --p-height-2800: 7rem; /* @kind other */
+  --p-height-3200: 8rem; /* @kind other */
+  --p-height-field-min-block-size: 1.875rem; /* @kind other */
+  --p-width-0: 0rem; /* @kind other */
+  --p-width-025: .0625rem; /* @kind other */
+  --p-width-050: .125rem; /* @kind other */
+  --p-width-100: .25rem; /* @kind other */
+  --p-width-150: .375rem; /* @kind other */
+  --p-width-200: .5rem; /* @kind other */
+  --p-width-300: .75rem; /* @kind other */
+  --p-width-400: 1rem; /* @kind other */
+  --p-width-500: 1.25rem; /* @kind other */
+  --p-width-600: 1.5rem; /* @kind other */
+  --p-width-700: 1.75rem; /* @kind other */
+  --p-width-800: 2rem; /* @kind other */
+  --p-width-900: 2.25rem; /* @kind other */
+  --p-width-1000: 2.5rem; /* @kind other */
+  --p-width-1200: 3rem; /* @kind other */
+  --p-width-1600: 4rem; /* @kind other */
+  --p-width-2000: 5rem; /* @kind other */
+  --p-width-2400: 6rem; /* @kind other */
+  --p-width-2800: 7rem; /* @kind other */
+  --p-width-3200: 8rem; /* @kind other */
+}

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Polaris 2.0 kitchen sink</title>
+  <script src="https://cdn.shopify.com/shopifycloud/polaris-2.0-rc.js"></script>
+</head>
+<body>
+<s-page heading="Kitchen sink" inlinesize="large">
+  <s-button slot="primary-action" variant="primary">Primary action</s-button>
+  <s-button slot="secondary-actions">Secondary</s-button>
+  <s-button slot="breadcrumb-actions" href="#" icon="arrow-left" accessibilitylabel="Back"></s-button>
+
+  <s-section heading="Typography">
+    <s-stack direction="block" gap="base">
+      <s-heading>Heading</s-heading>
+      <s-paragraph>Paragraph with <s-text fontweight="bold">bold</s-text>, <s-text tone="subdued">subdued</s-text> and <s-link href="#">link</s-link> text.</s-paragraph>
+      <s-number>1,234.56</s-number>
+      <s-unordered-list><s-list-item>Unordered item</s-list-item></s-unordered-list>
+      <s-ordered-list><s-list-item>Ordered item</s-list-item></s-ordered-list>
+    </s-stack>
+  </s-section>
+
+  <s-section heading="Actions">
+    <s-stack direction="inline" gap="base">
+      <s-button variant="primary">Primary</s-button>
+      <s-button variant="secondary">Secondary</s-button>
+      <s-button variant="tertiary">Tertiary</s-button>
+      <s-button tone="critical">Critical</s-button>
+      <s-button loading>Loading</s-button>
+      <s-button disabled>Disabled</s-button>
+      <s-button icon="plus">With icon</s-button>
+      <s-press-button pressed>Pressed</s-press-button>
+      <s-button-group>
+        <s-button>Group A</s-button>
+        <s-button>Group B</s-button>
+      </s-button-group>
+      <s-button commandfor="menu-popover" command="--toggle" icon="menu-horizontal" accessibilitylabel="More actions"></s-button>
+      <s-popover id="menu-popover">
+        <s-menu>
+          <s-button>Rename</s-button>
+          <s-button>Export</s-button>
+          <s-button tone="critical">Delete</s-button>
+        </s-menu>
+      </s-popover>
+      <s-clickable href="#" padding="base" border="base" borderradius="base">Clickable box</s-clickable>
+    </s-stack>
+  </s-section>
+
+  <s-section heading="Feedback and status">
+    <s-stack direction="block" gap="base">
+      <s-banner tone="info" heading="Informational banner" dismissible>Body copy.</s-banner>
+      <s-banner tone="success" heading="Success banner">Body copy.</s-banner>
+      <s-banner tone="warning" heading="Warning banner">Body copy.</s-banner>
+      <s-banner tone="critical" heading="Critical banner">Body copy.
+        <s-button slot="secondary-actions">Secondary</s-button>
+      </s-banner>
+      <s-stack direction="inline" gap="small">
+        <s-badge>Neutral</s-badge>
+        <s-badge tone="success">Active</s-badge>
+        <s-badge tone="info">Draft</s-badge>
+        <s-badge tone="warning">Warning</s-badge>
+        <s-badge tone="critical">Critical</s-badge>
+        <s-chip>Chip</s-chip>
+        <s-chip removable>Removable chip</s-chip>
+        <s-clickable-chip href="#">Clickable chip</s-clickable-chip>
+      </s-stack>
+      <s-progress value="60" max="100" accessibilitylabel="Progress"></s-progress>
+      <s-spinner accessibilitylabel="Loading"></s-spinner>
+      <s-empty-state heading="No records yet">
+        <s-paragraph slot="subheading">Explain what a record is and how to get the first one.</s-paragraph>
+        <s-button slot="primary-action" variant="primary">Create record</s-button>
+        <s-button slot="secondary-actions">Learn more</s-button>
+      </s-empty-state>
+    </s-stack>
+  </s-section>
+
+  <s-section heading="Forms">
+    <s-stack direction="block" gap="base">
+      <s-text-field label="Text field" placeholder="Placeholder" details="Help text" maxlength="30"></s-text-field>
+      <s-text-field label="With error" value="bad" error="Explain what is wrong"></s-text-field>
+      <s-text-area label="Text area" rows="3"></s-text-area>
+      <s-number-field label="Number field" min="0" max="10" step="1" value="3"></s-number-field>
+      <s-money-field label="Money field" currencycode="USD" value="14.99"></s-money-field>
+      <s-email-field label="Email field"></s-email-field>
+      <s-url-field label="URL field"></s-url-field>
+      <s-password-field label="Password field"></s-password-field>
+      <s-search-field label="Search field" placeholder="Search"></s-search-field>
+      <s-date-field label="Date field"></s-date-field>
+      <s-date-picker></s-date-picker>
+      <s-color-field label="Color field" value="#008060"></s-color-field>
+      <s-color-picker value="#008060"></s-color-picker>
+      <s-select label="Select" placeholder="Choose one">
+        <s-option value="a">Option A</s-option>
+        <s-option-group label="Group">
+          <s-option value="b">Option B</s-option>
+        </s-option-group>
+      </s-select>
+      <s-checkbox label="Checkbox" details="Help text"></s-checkbox>
+      <s-switch label="Switch"></s-switch>
+      <s-choice-list label="Choice list (single)" name="plan">
+        <s-choice value="monthly" selected>Monthly</s-choice>
+        <s-choice value="annual">Annual</s-choice>
+      </s-choice-list>
+      <s-choice-list label="Choice list (multiple)" name="opts" multiple>
+        <s-choice value="a">A</s-choice>
+        <s-choice value="b">B</s-choice>
+      </s-choice-list>
+      <s-drop-zone label="Drop zone" accept=".json,.bundlefactory"></s-drop-zone>
+    </s-stack>
+  </s-section>
+
+  <s-section heading="Layout">
+    <s-grid gridtemplatecolumns="repeat(3, 1fr)" gap="base">
+      <s-grid-item><s-box padding="base" border="base" borderradius="base">Grid item 1</s-box></s-grid-item>
+      <s-grid-item><s-box padding="base" border="base" borderradius="base">Grid item 2</s-box></s-grid-item>
+      <s-grid-item><s-box padding="base" border="base" borderradius="base">Grid item 3</s-box></s-grid-item>
+    </s-grid>
+    <s-divider></s-divider>
+    <s-scroll-box blocksize="120px"><s-paragraph>Scrollable content</s-paragraph></s-scroll-box>
+    <s-query-container><s-paragraph>Container-query aware content</s-paragraph></s-query-container>
+  </s-section>
+
+  <s-section heading="Media">
+    <s-stack direction="inline" gap="base" alignitems="center">
+      <s-avatar initials="BF" alt="Bundle Factory"></s-avatar>
+      <s-thumbnail src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png" alt="Product"></s-thumbnail>
+      <s-image src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png" alt="Image" inlinesize="120px"></s-image>
+      <s-icon type="products"></s-icon>
+      <s-tooltip id="tip">Tooltip text</s-tooltip>
+      <s-button interestfor="tip" icon="info" accessibilitylabel="Info"></s-button>
+    </s-stack>
+  </s-section>
+
+  <s-section heading="Table">
+    <s-table>
+      <s-table-header-row>
+        <s-table-header>Product</s-table-header>
+        <s-table-header>Status</s-table-header>
+        <s-table-header>Updated</s-table-header>
+      </s-table-header-row>
+      <s-table-body>
+        <s-table-row>
+          <s-table-cell>Gift set</s-table-cell>
+          <s-table-cell><s-badge tone="success">Active</s-badge></s-table-cell>
+          <s-table-cell>2026-09-26</s-table-cell>
+        </s-table-row>
+        <s-table-row>
+          <s-table-cell>Starter kit</s-table-cell>
+          <s-table-cell><s-badge tone="info">Draft</s-badge></s-table-cell>
+          <s-table-cell>2026-09-25</s-table-cell>
+        </s-table-row>
+      </s-table-body>
+    </s-table>
+  </s-section>
+
+  <s-section heading="Overlays">
+    <s-button commandfor="demo-modal" command="--show">Open modal</s-button>
+    <s-modal id="demo-modal" heading="Modal heading" size="base">
+      <s-paragraph>Modal body.</s-paragraph>
+      <s-button slot="primary-action" variant="primary" commandfor="demo-modal" command="--hide">Confirm</s-button>
+      <s-button slot="secondary-actions" commandfor="demo-modal" command="--hide">Cancel</s-button>
+    </s-modal>
+  </s-section>
+
+  <s-section slot="aside" heading="Aside section">
+    <s-paragraph>Sidebar content goes in the page's aside slot.</s-paragraph>
+  </s-section>
+</s-page>
+</body>
+</html>

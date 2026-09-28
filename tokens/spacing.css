@@ -1,0 +1,33 @@
+/* Polaris 2.0 spacing scale. Component attrs map: small-300..large-300 → these values. */
+:root{
+  --p-space-100: .25rem;
+  --p-space-0: 0rem;
+  --p-space-025: .0625rem;
+  --p-space-050: .125rem;
+  --p-space-150: .375rem;
+  --p-space-200: .5rem;
+  --p-space-250: .625rem;
+  --p-space-300: .75rem;
+  --p-space-400: 1rem;
+  --p-space-500: 1.25rem;
+  --p-space-600: 1.5rem;
+  --p-space-700: 1.75rem;
+  --p-space-800: 2rem;
+  --p-space-1000: 2.5rem;
+  --p-space-1200: 3rem;
+  --p-space-1600: 4rem;
+  --p-space-2000: 5rem;
+  --p-space-2400: 6rem;
+  --p-space-2800: 7rem;
+  --p-space-3200: 8rem;
+  --p-space-button-group-gap: .5rem;
+  --p-space-card-gap: 1rem;
+  --p-space-card-padding: 1rem;
+  --p-space-table-cell-padding: .375rem;
+  --p-space-choice-size: .875rem;
+  --p-space-choice-margin: .0625rem;
+  --p-space-badge-padding-inline: .375rem;
+  --p-space-badge-padding-inline-large: .5rem;
+  --p-space-badge-icon-padding-inline-start: .25rem;
+  --p-space-badge-icon-padding-inline-start-large: .25rem;
+}
